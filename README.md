@@ -22,7 +22,7 @@ Detailed descriptions of the algorithm and operators are provided in the accompa
 
 - `publication gga code.py`: Main GGA implementation, including evolutionary search and genetic operators.
 - `schedule_improvement.py`: Auxiliary scheduling and improvement procedures.
-- `j12031_8_output.txt`: Execution log of one illustrative experiment.
+- `j12031_8_output.txt.docx`: Execution log of one illustrative experiment.
 
 ### 3. Scheduling Improvement Module
 
