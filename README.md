@@ -121,3 +121,17 @@ During execution, the algorithm progressively improved the best makespan, demons
 **Output limitation:** Google Colab automatically truncated the displayed output to the last 5,000 lines. Consequently, the uploaded result file contains only the retained portion of the execution log, including the final results, rather than the complete search history.
 
 The standalone example and its associated execution output are provided primarily to demonstrate that the implementation can be executed independently. This single stochastic run is not intended to establish the overall solution quality or statistical performance of the proposed method. Comprehensive experimental evaluation is presented in the accompanying manuscript.
+
+### 10. Benchmark Data Loading for J30, J60, and J120
+
+The experimental evaluation includes benchmark instances from the PSPLIB J30, J60, and J120 families.
+
+The original GGA implementation uses different data-loading functions for different benchmark families. In particular, the J30 and J60 instances require their corresponding loading functions rather than directly using the J120 loading procedure.
+
+The standalone executable example (`github experiment.py`) is configured specifically for the J120 instance `j12031_8.sm`, whose benchmark data are embedded in the source code.
+
+To reproduce experiments on J30 or J60 instances, users should select the appropriate data-loading function in the original implementation and provide the corresponding PSPLIB benchmark files.
+
+The core GGA search framework remains the same; the data-loading procedure must be adapted to the selected benchmark family.
+
+The standalone J120 example is intended to demonstrate the implementation and execution of the proposed algorithm, rather than to reproduce the complete benchmark evaluation across all instance families.
