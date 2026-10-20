@@ -59,7 +59,7 @@ The main program also reads a reference-value file named `120cpm.txt`, which is 
 
 To execute the original implementation, users must provide the required input files and configure their paths consistently with the source code.
 
-### 6. Example Experiment Result
+### 6. Example Experiment Result from local computer
 
 The file `j12031_8_output.txt.docx` contains the execution log of a single experimental run on PSPLIB instance `j12031_8.sm`, using the implementation provided in publication gga code.py.
 
