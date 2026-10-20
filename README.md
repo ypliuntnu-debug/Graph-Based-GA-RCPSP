@@ -23,6 +23,7 @@ Detailed descriptions of the algorithm and operators are provided in the accompa
 - `publication gga code.py`: Main GGA implementation, including evolutionary search and genetic operators.
 - `schedule_improvement.py`: Auxiliary scheduling and improvement procedures.
 - `j12031_8_output.txt.docx`: Execution log of one illustrative experiment.
+-  `colab results from github experiment.py.docx`: Complete execution log of the standalone Google Colab example.
 
 ### 3. Scheduling Improvement Module
 
@@ -74,7 +75,7 @@ The original source code is provided to support independent examination and exec
 
 The historical experiments did not retain all random seeds. Therefore, exact reproduction of individual stochastic trajectories cannot be guaranteed.
 
-Because the algorithm involves stochastic evolutionary operations, independent executions using the same benchmark instance and experimental settings may produce different final makespans. The reported makespan of 201 represents the result of one recorded execution and is provided as illustrative experimental evidence rather than a guaranteed outcome of every run.
+Because the algorithm involves stochastic evolutionary operations, independent executions using the same benchmark instance and experimental settings may produce different final makespans. The original local execution achieved a makespan of 201, while an independent Google Colab execution of the standalone example achieved a makespan of 198. These results illustrate stochastic variation between executions and are not guaranteed outcomes.
 
 Independent executions can be used to assess the algorithm's behavior and reported performance.
 
@@ -104,8 +105,9 @@ python "github experiment.py"
 The program automatically prepares the embedded benchmark instance data, executes the GGA, and reports the best schedule, makespan, and computational time.
 
 ### 9. Standalone Example Results in Google Colab
+### 9. Standalone Example Results in Google Colab
 
-The file `colab truncated results from github experiment.py.odt` contains the available execution output from a single run of `github experiment.py` in Google Colab.
+The file `colab results from github experiment.py.docx` contains the complete execution record of an independent run of `github experiment.py` in Google Colab.
 
 The experiment used PSPLIB instance `j12031_8.sm` with a search limit of approximately 50,000 evaluated schedules.
 
@@ -115,16 +117,17 @@ The experiment used PSPLIB instance `j12031_8.sm` with a search limit of approxi
 |---|---|
 | Benchmark instance | `j12031_8.sm` |
 | Execution environment | Google Colab |
-| Final best makespan | 201 |
-| Evaluated schedules | 50,005 |
-| Computational time | Approximately 3,327 seconds |
+| Best makespan | **198** |
+| Evaluated schedules | 50,009 |
+| Computational time | Approximately 3,458 seconds |
 | Termination | Search evaluation limit |
 
-During execution, the algorithm progressively improved the best makespan, demonstrating the operation of its evolutionary search process.
+During execution, the algorithm progressively improved its best makespan, including improvements from 201 to 200, 199, and finally 198.
 
-**Output limitation:** Google Colab automatically truncated the displayed output to the last 5,000 lines. Consequently, the uploaded result file contains only the retained portion of the execution log, including the final results, rather than the complete search history.
+The complete execution record includes intermediate search results and the final scheduling solution.
 
-The standalone example and its associated execution output are provided primarily to demonstrate that the implementation can be executed independently. This single stochastic run is not intended to establish the overall solution quality or statistical performance of the proposed method. Comprehensive experimental evaluation is presented in the accompanying manuscript.
+The standalone example and its execution record are provided primarily to demonstrate that the implementation can be executed independently. This single stochastic run is not intended to establish the overall solution quality or statistical performance of the proposed method. Comprehensive experimental evaluation is presented in the accompanying manuscript.
+
 
 ### 10. Benchmark Data Loading for J30, J60, and J120
 
