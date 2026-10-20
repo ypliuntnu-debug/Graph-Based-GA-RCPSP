@@ -74,3 +74,50 @@ The example demonstrates the execution of the algorithm and is not intended to r
 The original source code is provided to support independent examination and execution of the proposed algorithm.
 
 The historical experiments did not retain all random seeds. Therefore, exact reproduction of individual stochastic trajectories cannot be guaranteed. Independent runs can be used to assess the algorithm's behavior and reported performance.
+
+### 8. Standalone Runnable Example
+
+The file `github experiment.py` provides a self-contained execution example of the proposed Graph-Based Genetic Algorithm (GGA) using PSPLIB instance `j12031_8.sm`.
+
+Unlike the original research implementation (`publication gga code.py`), this example embeds the benchmark instance data directly within the Python source code. The GGA and auxiliary forward–backward improvement (FBI) procedures are integrated into a single executable file.
+
+The example retains the main evolutionary search mechanisms of the original implementation, including the graph-based genetic operators and scheduling improvement procedures.
+
+The purpose of this standalone example is to facilitate independent execution and examination of the proposed algorithm without requiring users to download external PSPLIB instance files or configure additional scheduling modules.
+
+**Execution requirements:**
+
+- Python 3
+- NumPy
+- pandas
+
+The example can be executed in a Python environment or Google Colab.
+
+```bash
+python "github experiment.py"
+```
+
+The program automatically prepares the embedded benchmark instance data, executes the GGA, and reports the best schedule, makespan, and computational time.
+
+### 9. Standalone Example Results in Google Colab
+
+The file `colab truncated results from github experiment.py.odt` contains the available execution output from a single run of `github experiment.py` in Google Colab.
+
+The experiment used PSPLIB instance `j12031_8.sm` with a search limit of approximately 50,000 evaluated schedules.
+
+**Recorded results:**
+
+| Item | Result |
+|---|---|
+| Benchmark instance | `j12031_8.sm` |
+| Execution environment | Google Colab |
+| Final best makespan | 201 |
+| Evaluated schedules | 50,005 |
+| Computational time | Approximately 3,327 seconds |
+| Termination | Search evaluation limit |
+
+During execution, the algorithm progressively improved the best makespan, demonstrating the operation of its evolutionary search process.
+
+**Output limitation:** Google Colab automatically truncated the displayed output to the last 5,000 lines. Consequently, the uploaded result file contains only the retained portion of the execution log, including the final results, rather than the complete search history.
+
+The standalone example and its associated execution output are provided primarily to demonstrate that the implementation can be executed independently. This single stochastic run is not intended to establish the overall solution quality or statistical performance of the proposed method. Comprehensive experimental evaluation is presented in the accompanying manuscript.
