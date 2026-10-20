@@ -70,10 +70,14 @@ The final makespan obtained in this illustrative run was **201 time units**.
 The example demonstrates the execution of the algorithm and is not intended to represent the average performance over multiple independent runs.
 
 ### 7. Reproducibility Notes
-
 The original source code is provided to support independent examination and execution of the proposed algorithm.
 
-The historical experiments did not retain all random seeds. Therefore, exact reproduction of individual stochastic trajectories cannot be guaranteed. Independent runs can be used to assess the algorithm's behavior and reported performance. by the way, because the algorithm involves stochastic evolutionary operations, independent executions using the same benchmark instance and experimental settings may produce different final makespans. Therefore, the value of 201 is provided as evidence of an actual execution result, rather than a guaranteed outcome of every run.
+The historical experiments did not retain all random seeds. Therefore, exact reproduction of individual stochastic trajectories cannot be guaranteed.
+
+Because the algorithm involves stochastic evolutionary operations, independent executions using the same benchmark instance and experimental settings may produce different final makespans. The reported makespan of 201 represents the result of one recorded execution and is provided as illustrative experimental evidence rather than a guaranteed outcome of every run.
+
+Independent executions can be used to assess the algorithm's behavior and reported performance.
+
 
 ### 8. Standalone Runnable Example
 
