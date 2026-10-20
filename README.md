@@ -61,7 +61,7 @@ To execute the original implementation, users must provide the required input fi
 
 ### 6. Example Experiment Result
 
-The file `j12031_8_output.txt` contains the execution log of a single experimental run on PSPLIB instance `j12031_8.sm`.
+The file `j12031_8_output.txt` contains the execution log of a single experimental run on PSPLIB instance `j12031_8.sm`, using the implementation provided in publication gga code.py.
 
 The log records the problem data, intermediate solution improvements, and the final scheduling result.
 
