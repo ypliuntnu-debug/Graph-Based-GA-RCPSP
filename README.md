@@ -105,7 +105,6 @@ python "github experiment.py"
 The program automatically prepares the embedded benchmark instance data, executes the GGA, and reports the best schedule, makespan, and computational time.
 
 ### 9. Standalone Example Results in Google Colab
-### 9. Standalone Example Results in Google Colab
 
 The file `colab results from github experiment.py.docx` contains the complete execution record of an independent run of `github experiment.py` in Google Colab.
 
