@@ -80,29 +80,45 @@ Because the algorithm involves stochastic evolutionary operations, independent e
 Independent executions can be used to assess the algorithm's behavior and reported performance.
 
 
+
 ### 8. Standalone Runnable Example
 
-The file `github experiment.py` provides a self-contained execution example of the proposed Graph-Based Genetic Algorithm (GGA) using PSPLIB instance `j12031_8.sm`.
+The file `github experiment.py` provides a self-contained, executable implementation of the proposed Graph-Based Genetic Algorithm (GGA) for the PSPLIB instance `j12031_8.sm`, which is also used in the ablation case study presented in the manuscript.
 
-Unlike the original research implementation (`publication gga code.py`), this example embeds the benchmark instance data directly within the Python source code. The GGA and auxiliary forward–backward improvement (FBI) procedures are integrated into a single executable file.
+**Consistency with the original implementation**
 
-The standalone example retains the same GGA functions, genetic operators, and algorithmic parameter settings as the original research implementation (publication gga code.py), as described in Section 4. It is not a simplified version of the algorithm. The adaptations primarily involve embedding the scheduling-improvement module and PSPLIB instance data into a single Python file, together with the corresponding input/output arrangements. These adaptations do not change the underlying GGA search algorithm or its parameter settings.
+The standalone example retains the same GGA functions, genetic operators, and algorithmic parameter settings as the original research implementation (`publication gga code.py`), as described in Section 4. It is not a simplified version of the algorithm, and the underlying genetic search procedure remains unchanged.
 
-The purpose of this standalone example is to facilitate independent execution and examination of the proposed algorithm without requiring users to download external PSPLIB instance files or configure additional scheduling modules.
+**Self-contained execution**
 
-**Execution requirements:**
+The original research implementation requires external PSPLIB benchmark files, reference-value data, and appropriate file-path configuration.
+
+To eliminate these external dependencies for the illustrative experiment, the standalone version embeds the `j12031_8.sm` benchmark data and the scheduling-improvement module, including the forward–backward improvement (FBI) procedures, directly within a single Python file. The corresponding input/output arrangements have also been adapted.
+
+Consequently, readers can independently execute and examine the GGA on this benchmark instance without downloading separate PSPLIB files or configuring additional scheduling modules.
+
+**Execution requirements**
 
 - Python 3
 - NumPy
 - pandas
 
-The example can be executed in a Python environment or Google Colab.
+The example can be executed in a local Python environment or Google Colab using:
 
 ```bash
 python "github experiment.py"
 ```
 
-The program automatically prepares the embedded benchmark instance data, executes the GGA, and reports the best schedule, makespan, and computational time.
+The program prepares the embedded benchmark instance data, executes the GGA, and reports the best schedule, makespan, and computational time.
+
+**Supporting execution records**
+
+Two illustrative execution records are provided in the repository:
+
+- **Local computer:** An execution of the original research implementation (`publication gga code.py`) achieved a makespan of **201**.
+- **Google Colab:** An independent execution of the standalone implementation (`github experiment.py`) achieved a makespan of **198**.
+
+The corresponding execution logs are documented in Sections 6 and 9. These records provide concrete examples of the algorithm's execution in different computing environments. As the GGA is stochastic, identical makespans are not guaranteed across independent runs.
 
 ### 9. Standalone Example Results in Google Colab
 
