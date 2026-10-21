@@ -706,18 +706,7 @@ class RCPSP(object):
 
         init_resource_left = [[Ri for Ri in R] for timestep in range(T + 1)]
         pheromone_graph = [[delta_t for col in range(activity_num)] for raw in range(activity_num)]
-        #
-        # print("活动序号:", V)
-        # print("活动后继:", suc_act)
-        # print("活动前驱:", pre_act)
-        # print("活动LS:", LS)
-        # print("活动LF:", LF)
-        # print("活动紧继图", E)
-        # print("有效活动数", activity_num - 2)
-        # print("活动持续时间", d)
-        # print("活动所需资源", r)
-        # print("总资源", R)
-        # print("持续时间累和", T)
+
         self.new()
 
     def new(self):
