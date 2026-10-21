@@ -48,7 +48,7 @@ The main source code includes the following settings for the supplied J120 examp
 | Auxiliary improvement | Forward–backward improvement |
 | ACO pheromone updating | Not used |
 
-The search is stochastic. Results may vary between independent executions.
+Additional algorithmic parameters, including those controlling population initialization, genetic operations, and evolutionary search, are defined directly in the source code and described in the accompanying manuscript. The search is stochastic. Results may vary between independent executions.
 
 ### 5. Input Data and Execution
 
@@ -86,7 +86,7 @@ The file `github experiment.py` provides a self-contained execution example of t
 
 Unlike the original research implementation (`publication gga code.py`), this example embeds the benchmark instance data directly within the Python source code. The GGA and auxiliary forward–backward improvement (FBI) procedures are integrated into a single executable file.
 
-The example retains the main evolutionary search mechanisms of the original implementation, including the graph-based genetic operators and scheduling improvement procedures.
+The standalone example retains the same GGA functions, genetic operators, and algorithmic parameter settings as the original research implementation (publication gga code.py), as described in Section 4. It is not a simplified version of the algorithm. The adaptations primarily involve embedding the scheduling-improvement module and PSPLIB instance data into a single Python file, together with the corresponding input/output arrangements. These adaptations do not change the underlying GGA search algorithm or its parameter settings.
 
 The purpose of this standalone example is to facilitate independent execution and examination of the proposed algorithm without requiring users to download external PSPLIB instance files or configure additional scheduling modules.
 
