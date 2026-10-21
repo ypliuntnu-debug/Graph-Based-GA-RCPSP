@@ -1,6 +1,6 @@
 import re, copy, random, os, time
 global ant_num
-ant_num =3
+ant_num =1
 delta_t, p, a, pga =  0.00001, 0.1, 0.9, 0.99
 activity_num = 0
 R = []
