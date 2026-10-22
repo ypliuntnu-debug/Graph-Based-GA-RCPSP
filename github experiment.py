@@ -3098,7 +3098,8 @@ opm = 92
 if __name__ == "__main__":
     from pathlib import Path
 
-    instance_path = Path(__file__).resolve().parent / "j12031_8.sm"
+    #instance_path = Path(__file__).resolve().parent / "j12031_8.sm"
+    instance_path = Path.cwd() / "j12031_8.sm"
 
     # Create the instance file from embedded data
     instance_path.write_text(_PSPLIB_SOURCE, encoding="utf-8")
