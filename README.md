@@ -152,6 +152,6 @@ The original GGA implementation uses different data-loading functions for differ
 
 The standalone executable example (`github experiment.py`) is configured specifically for the J120 instance `j12031_8.sm`, whose benchmark data are embedded in the source code.
 
-The supplied implementation is configured for J120 instances. Reproducing experiments on J30 and J60 requires the corresponding benchmark data-loading functions, PSPLIB instance files, relevant reference-value files and relevant reference-value files, and appropriate file-path configuration, while the core GGA search framework remains unchanged. 
+The supplied implementation is configured for J120 instances. Reproducing experiments on J30 and J60 requires the corresponding benchmark data-loading functions, PSPLIB instance files, relevant reference-value files, and appropriate file-path configuration, while the core GGA search framework remains unchanged. 
 
 The standalone J120 example is intended to demonstrate the implementation and execution of the proposed algorithm, rather than to reproduce the complete benchmark evaluation across all instance families.
