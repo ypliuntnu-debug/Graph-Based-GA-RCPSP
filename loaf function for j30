@@ -1,0 +1,54 @@
+def loda_data(file_name):
+
+    global csvFile, opm, c, c1, rsl, rc, activity, pa, d, cities
+    i=0
+    csvFile= open(file_name)
+    f = csv.reader(csvFile)
+
+    for item in f:
+        i = i + 1
+        b = []
+        b1 = []
+        if i > 18 and i < 50:
+            # if i ==19:
+            # print(item)
+            string = item[0]
+            a = string.split()
+            # print(a)
+            for j in range(len(a)):
+                if j != 0 and j != 1 and j != 2:
+                    b.append(int(a[j]))
+            # print(b)
+            c.append(b)
+        if i > 54 and i < 87:
+            # print(item)
+            string1 = item[0]
+            a1 = string1.split()
+            # print(a)
+            for j in range(len(a1)):
+                if j != 0 and j != 1 and j != 2:
+                    b1.append(int(a1[j]))
+                if j == 2:
+                    duration.append(int(a1[j]))
+            # print(b)
+            c1.append(b1)
+        if i == 90:
+            string2 = item[0]
+            a2 = string2.split()
+    for j2 in range(len(a2)):
+        a2[j2] = int(a2[j2])
+    rsl = a2
+    rc = c1
+    activity = list(np.array(list(range(32))) + 1)  ######## attention
+    d = list(zip(activity, c))
+    for k in range(len(activity)):
+        pa.append([])
+    for k1 in range(len(c)):
+        for k2 in range(len(c[k1])):
+            pa[c[k1][k2] - 1].append(activity[k1])
+
+    for k3 in range(len(pa)):
+        if pa[k3] == []:
+            pa[k3] = [0]
+
+    cities = list(np.array(list(range(len(duration)))) + 1)
