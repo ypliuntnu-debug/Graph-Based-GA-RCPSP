@@ -148,7 +148,7 @@ The standalone example and its execution record are provided primarily to demons
 
 The experimental evaluation includes benchmark instances from the PSPLIB J30, J60, and J120 families.
 
-The original GGA implementation uses different data-loading functions for different benchmark families. In particular, the J30 and J60 instances require their corresponding loading functions rather than directly using the J120 loading procedure.
+The original GGA implementation uses different data-loading functions for different benchmark families. In particular, the J30 and J60 instances require their corresponding loading functions ('load function for j30' and 'load function for j60') rather than directly using the J120 loading procedure.
 
 The standalone executable example (`github experiment.py`) is configured specifically for the J120 instance `j12031_8.sm`, whose benchmark data are embedded in the source code.
 
